@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this repository, cite the repository and the underlying HFF, CLASH, Chandra, and lens-model sources used by the paper."
+title: "Paper 6: HFF/CLASH controlled lensing/X-ray cross-readout enrichment audit"
+type: dataset
+authors:
+  - family-names: "Olcsak"
+    given-names: "Jozsef"
+repository-code: "https://github.com/jolcsak/HDDA-DTL"
+url: "https://github.com/jolcsak/HDDA-DTL/tree/codex/tau-hff-cross-readout-paper6"
+date-released: "2026-05-21"
+license: "MIT"
+abstract: "A public reproducibility package for Paper 6, an observational audit of controlled lensing/X-ray cross-readout enrichment in HFF and external CLASH clusters. The package is not a proof of Tau Core, dark-matter falsification, or a derived new-gravity mechanism."
+keywords:
+  - "cluster lensing"
+  - "Hubble Frontier Fields"
+  - "CLASH"
+  - "Chandra"
+  - "cross-readout enrichment"
+  - "reproducibility"
+preferred-citation:
+  type: article
+  title: "A Controlled Lensing/X-ray Cross-Readout Enrichment Audit in HFF and CLASH Clusters"
+  authors:
+    - family-names: "Olcsak"
+      given-names: "Jozsef"
+  year: 2026
+  notes: "Paper 6 manuscript draft; not peer reviewed."
+  repository-code: "https://github.com/jolcsak/HDDA-DTL"

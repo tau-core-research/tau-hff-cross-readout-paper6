@@ -1,0 +1,5 @@
+cluster,model,observable,tracer,observed_enrichment,matched_null_mean,matched_null_p95,matched_empirical_p_ge_observed,residual_null_ratio
+abell370,williams_v4.1,magnif,chandra_xray_sigma1,1.3691158406441146,1.8398991829765956,1.8544826462780064,1.0,0.7441254680211087
+macs0717,williams_v4.1,magnif,chandra_xray_sigma1,1.5614298166381482,1.9582101864694492,1.976920362678855,1.0,0.7973760056132302
+macs0717,williams_v4.1,magnif,chandra_xray_radius_exposure_residual_z,0.9451339739158884,1.0827936582229432,1.0988576927999156,1.0,0.8728661889902655
+macs0717,diego_v4.1,magnif,chandra_xray_sigma1,1.778363245047082,1.989857506472584,2.0196140728635465,1.0,0.8937138660745525

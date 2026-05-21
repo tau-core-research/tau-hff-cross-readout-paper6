@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+*.aux
+*.log
+*.out
+*.toc
+*.blg
+*.bbl
+*.synctex.gz
+paper6_submission_source/*.aux
+paper6_submission_source/*.log
+paper6_submission_source/*.out
+paper6_submission_source/*.toc
+paper6_submission_source/*.blg
+paper6_submission_source/*.bbl
