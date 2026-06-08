@@ -108,6 +108,23 @@ arxiv_submission_source.zip
 The ZIP is built from `paper6_submission_source/` and excludes the compiled PDF
 and temporary LaTeX build files, matching the Paper 1 packaging pattern.
 
+## Zenodo Publication Status
+
+This public repository is Zenodo-ready for version `v0.1.0`:
+
+```text
+.zenodo.json
+CITATION.cff
+LICENSE
+arxiv_submission_source.zip
+paper6_submission_source/main.pdf
+```
+
+Automatic DOI minting requires enabling the repository in the Zenodo GitHub
+integration before creating or reprocessing a GitHub release. If the
+integration is not enabled, the same release package can be uploaded manually
+or through the Zenodo API with this metadata.
+
 ## Scope
 
 This repository is a reproducibility package for Paper 6 only. It excludes

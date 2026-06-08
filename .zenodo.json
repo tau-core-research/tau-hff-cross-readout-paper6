@@ -1,0 +1,29 @@
+{
+  "title": "HFF/CLASH Controlled Lensing/X-ray Cross-Readout Enrichment Audit",
+  "upload_type": "software",
+  "description": "Public reproducibility package for Paper 6, an observational audit of controlled lensing/X-ray cross-readout enrichment in HFF and external CLASH clusters. The package contains manuscript source, rendered PDF, arXiv source package, derived artifacts, scripts, and tests. It is not a proof of Tau Core, not a dark-matter falsification, and not a derived new-gravity mechanism.",
+  "creators": [
+    {
+      "name": "Olcsak, Jozsef"
+    }
+  ],
+  "license": "MIT",
+  "version": "v0.1.0",
+  "access_right": "open",
+  "keywords": [
+    "cluster lensing",
+    "Hubble Frontier Fields",
+    "CLASH",
+    "Chandra",
+    "cross-readout enrichment",
+    "reproducibility package"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/tau-core-research/tau-hff-cross-readout-paper6",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "The publication-facing result is a controlled enrichment audit under declared controls, not a standalone physical-mechanism claim."
+}
