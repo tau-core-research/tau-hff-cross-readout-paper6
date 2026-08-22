@@ -7,8 +7,8 @@ authors:
     given-names: "Jozsef"
 repository-code: "https://github.com/tau-core-research/tau-hff-cross-readout-paper6"
 url: "https://github.com/tau-core-research/tau-hff-cross-readout-paper6"
-date-released: "2026-06-08"
-version: "v0.1.0"
+date-released: "2026-08-22"
+version: "v0.1.1"
 license: "MIT"
 abstract: "A public reproducibility package for Paper 6, an observational audit of controlled lensing/X-ray cross-readout enrichment in HFF and external CLASH clusters. The package is not a proof of Tau Core, dark-matter falsification, or a derived new-gravity mechanism."
 keywords:
