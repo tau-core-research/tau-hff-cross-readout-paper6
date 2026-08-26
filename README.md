@@ -73,6 +73,13 @@ Raw HFF, CLASH, and Chandra data products are not redistributed here. This is a
 paper-level public reproducibility package, not the full private research
 workbench.
 
+## Full-4D Score Boundary
+
+The HFF/CLASH enrichment statistic is not the fixed physical Tau score. A
+future eligible test must start from one source-frozen
+`E_K = (K_HH - K_std) - C K_VV^-1 C^dagger`, generate all terminals from its
+common coframe push, remove exact duplicates, and retain full covariance.
+
 ## Reproduce
 
 Create an environment with Python 3.10 or newer, then install the lightweight
