@@ -10,9 +10,12 @@
 \usepackage{array}
 \usepackage{enumitem}
 \usepackage{xcolor}
-\usepackage[hidelinks,colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{pdfencoding=auto,psdextra}{hyperref}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{}
 \usepackage[numbers,sort&compress]{natbib}
-\usepackage{authblk}
+\emergencystretch=2em
 
 % --- Custom commands ----------------------------------------------------
 \newcommand{\HFF}{\textsc{hff}}
@@ -25,16 +28,15 @@
 % --- Title --------------------------------------------------------------
 \title{A Controlled Lensing/X-ray Cross-Readout Enrichment Audit in HFF and CLASH Clusters}
 
-\author[1]{J\'ozsef Olcs\'ak}
-\affil[1]{Independent researcher, Budapest, Hungary}
+\author{J\'ozsef Olcs\'ak\\ \small Independent researcher, Budapest, Hungary}
 
-\date{Internal draft v0 --- 2026-05-21\\Last revised: 2026-08-26}
+\date{Last revised: 14 November 2026}
 
 \begin{document}
 
 \maketitle
 
-\begin{abstract}\sloppy
+\begin{abstract}
 We present a controlled X-ray/lensing enrichment audit for six Hubble Frontier
 Fields strong-lensing clusters and a frozen external CLASH map-level
 validation sample. For each system we compare radius- and exposure-controlled
@@ -680,102 +682,118 @@ source-owned metric packet or fixed Tau prediction.
 
 \section{Limitations}
 
-This draft is not submission-ready. The model-team README audit,
+The model-team README audit,
 method-family BibTeX key coverage, compact-source masking audit, and
-model-family uncertainty layer are complete at the current preprint-draft
-level. Remaining blockers are narrower: the bibliography still needs final
-publisher/ADS metadata verification; the \HFF{} development sample remains
-small and \HFF{}-selected, with only six clusters; the two newly reduced
+model-family uncertainty layer are complete at the current preprint
+level. Remaining limitations are specific: the \HFF{} development sample remains
+small and \HFF{}-selected, with only six clusters; the two most recently reduced
 \HFF{} clusters are first-pass products; the CLASH external validation uses
 one public model-team family in two parameterizations and therefore does not
 replace broader multi-team external lens-model validation; MACS0717 has the
 strongest compact-source radial-null layer while the other clusters currently
-use enrichment-comparison masking audits; the first-pass random-effects
-meta-analysis now includes spatial-block row uncertainties, block-size sweep,
-correlation-length calibration, and one frozen external CLASH application, but
-the rule should still be preregistered and repeated on broader samples; the
-public reproducibility package is scaffolded but not yet released; the
+use enrichment-comparison masking audits; the random-effects
+meta-analysis includes spatial-block row uncertainties, block-size sweep,
+correlation-length calibration, and one frozen external CLASH application, and
+should be repeated on broader preregistered samples; the
 rotation-curve branch remains separate; and any projection-based physical
-interpretation, including \(\tau\)-core-like interpretations, remains a later
-theory object until derived from explicit dynamical assumptions.
+interpretation, including \(\tau\)-core-like interpretations, remains an upstream
+theory object rather than an inference licensed by this observational prefilter alone.
+
+\section{Upstream Interface and Canonical Three-Pillar Bridge}
+\label{sec:upstream-interface}
 
 % BEGIN OBSERVER UPDATE 20260914
-\section{Observer realization: inherited results and physical boundary}
+\subsection{Observer Realization: Inherited Results and Physical Boundary}
 \label{sec:observer-update-20260914}
 The current observer programme distinguishes a conditional mathematical
 construction from an occupied physical measuring system. The source order
-remains base plus one universal seed, stabilized morphological response,
-observer--source restriction, shared descriptor, and resolved terminal
-readouts. Neither a detector nor an empirical residual constructs the parent
-body backwards. Dynamics below concern downstream subsystems only.
+remains base plus one universal seed, stabilized morphological response
+$M_\tau^\star$, observer--source restriction, shared descriptor, and resolved
+terminal readouts. Neither a detector nor an empirical residual constructs the
+parent body backwards; dynamics concern downstream subsystems only.
 
-The canonical observer-origin derivation, Sections 22--26, owns the following
-results. The existing joint source action fixes static and frequency-dependent
-response together. Variation of the BRAC potential couples to the field
-square; a linear field coupling is a distinct comparator unless derived by
-expansion about an occupied background. Fixed canonical means select a unique
-coherent state in a finite positive harmonic packet only if there is no excess
-fluctuation energy. This is a free/asymptotic preparation statement, not the
-ground state of an interacting detector. For the existing coupled harmonic
-pair, the joint ground is pure but either local subsystem is mixed, with its
-covariance fixed by the complete joint Hamiltonian.
-
-These are conditional derivations and internal numerical checks. The actual
-observer--source context, physical preparation process, kinetic/energy
-calibration and stable operational resolution remain unproved. The existing
-ORA-T1 selector conditionally chooses stable quantizers when the occupied
-context, admissible partition family and positive closure barrier are supplied;
-it does not establish those physical premises. A computed ground state is not
-a preparation mechanism, and a covariance or optimal abstract measurement is
-not an implemented stable quantizer $Q_{OS}$.
-
-\paragraph{Ownership and use.}
-The central observer-origin note owns the new contact, state and covariance
-derivations; the body-readout technical companion carries the consolidated
-mathematics. Foundation Papers IV, V and VI retain physical-selection,
-clock-descent and quantum-readout ownership, respectively. This paper imports
-only the consequences within its scope. No observational dataset, baseline,
-frozen coefficient, score or empirical conclusion is revised by this update.
-The reproducibility supplement records the source hashes and the exact
-conditional/physical distinction.
-
-
-\paragraph{Consequence for this paper.}
-Different terminal labels are not independent information sources without a factorization or novelty proof. A nonzero correlation is not automatically a standard-orthogonal Tau signal.
+In Technical Paper TD-II (\emph{Body-to-Readout Derivation}), the joint source
+action fixes static and frequency-dependent response together: variation of the
+BRAC potential couples to the field square, fixed canonical means select a
+unique coherent state in a finite positive harmonic packet only at zero excess
+fluctuation energy, and for the coupled harmonic pair the joint ground state is
+pure while either local subsystem is mixed with covariance fixed by the
+complete joint Hamiltonian. The ORA-T1 selector conditionally chooses stable
+quantizers when the occupied context, admissible partition family, and positive
+closure barrier are supplied, without establishing those physical premises or
+implementing a stable quantizer $Q_{OS}$. Foundation Papers IV, V, and VI
+retain physical-selection, clock-descent, and quantum-readout ownership,
+respectively. Different terminal labels are not independent information sources
+without a factorization or novelty proof, a nonzero correlation is not
+automatically a standard-orthogonal Tau signal, and no observational dataset,
+baseline, frozen coefficient, or enrichment score in this paper is revised.
 % END OBSERVER UPDATE 20260914
 
 % BEGIN STATE UPDATE 20260918
-\section{Source identification and recovery}
-The current observer audit separates a conditional forward construction from physical source selection. A frozen body, occupied observer incidence, preparation, complete instrument and stable resolution can determine records without selecting those inputs from Nature. Equal effects do not fix postmeasurement states, and symmetry within a chosen interaction family does not exclude other symmetric couplings. Different terminal labels are not independent information sources without a factorization or novelty proof. A nonzero correlation is not automatically a standard-orthogonal Tau signal.
-
-\paragraph{Dependency and claim ownership.}
-Foundation VI and the body--readout technical companion own the finite instrument/access proof; Foundation IV and TD-0 retain physical source selection; Foundation V, the temporal synthesis and seed--body companion own the gradient/inertial distinction. This paper inherits only the stated specialization. Canonical assumptions, countermodels and calibration audits are in \url{https://github.com/tau-core-research/tau-core-theory/blob/main/docs/tau_rqm_instrument_to_record_bridge_001.md}. No physical seed, Nature occupation or Tau-exclusive observation is established by this update. Existing empirical endpoint definitions and scores are unchanged.
+\subsection{Source Identification and Recovery}
+The observer audit separates a conditional forward construction from physical source selection. A frozen body, occupied observer incidence, preparation, complete instrument, and stable resolution can determine records without selecting those inputs from Nature. Equal effects do not fix postmeasurement states, and symmetry within a chosen interaction family does not exclude other symmetric couplings. Foundation VI and Technical Paper TD-II own the finite instrument/access proof; Foundation IV and TD-0 retain physical source selection; Foundation V, the temporal synthesis, and the seed--body companion own the gradient/inertial distinction. Canonical assumptions, countermodels, and calibration audits are archived at \url{https://github.com/tau-core-research/tau-core-theory/blob/main/docs/tau_rqm_instrument_to_record_bridge_001.md}. No physical seed, Nature occupation, or Tau-exclusive observation is established by this update; existing empirical endpoint definitions and scores are unchanged.
 % END STATE UPDATE 20260918
 
 % BEGIN PAIR READOUT UPDATE 20260927
-\section{Conditional source preparation and time-resolved access}
-The common-operator scalar--Dirac completion now supports an explicit
-conditional chain from interaction vertices to pair transfer and joint
-readout. Nonzero vertices do not select occupation. Relational coherence
-can be generated from an occupied number-diagonal pair even while both
-local mean fields vanish. In a declared resonant rotating-wave and Markov
-loss model, finite-window emission retains this coherence information,
-whereas an all-time count discards it. This is standard-compatible quantum
-recovery, not a Tau-specific observational residual.
-Different terminal labels are not independent information sources without a factorization or novelty proof. A nonzero correlation is not automatically a standard-orthogonal Tau signal.
-\paragraph{Dependency ownership and limits.}
-The P4 common-source assembly owns the scalar/Yukawa benchmark and finite
-preparation calculations; Foundation VI and the body--readout companion
-inherit the joint-access mathematics. Foundation IV and TD-0 retain
-physical source selection, and Foundation V retains clock descent.
-The parent remains atemporal: the evolution above is a conditional
-downstream 4D model, not parent memory or a derived morphogenetic time.
-Physical initial occupation, a gauge-complete realization, detector
-amplification, absolute calibration and stable observer-relative $Q_{OS}$
-remain unselected. No empirical endpoint or score is changed.
-The canonical derivation and reproducible numerical sources are linked at
-\url{https://github.com/tau-core-research/tau-core-theory/blob/main/docs/tau_core_p4_nonabelian_particle_common_source_assembly_001.md}.
+\paragraph{Imported result (CPR1).}
+\href{https://github.com/tau-core-research/tau-core-higgs-module-paper4/blob/main/paper4_full_derivation/full_derivation.pdf#nameddest=cpr1}{Paper 4, \emph{Full Derivation Ledger for the Branch A Higgs Module}}, section ``Conditional source preparation and time-resolved access,'' Theorem CPR1(b,c), v1.0 (2026-09-28), is the sole proof owner.
+Access-specific null directions must not be identified with nulls of the complete channel. The imported finite-sector example does not establish independent terminal information, photon or lensing recovery, or a Tau-specific correlation; empirical endpoints remain unchanged.
+Physical preparation, detector/clock calibration and stable $Q_{OS}$ remain assumptions; no Tau-exclusive observation follows.
 % END PAIR READOUT UPDATE 20260927
+
+% BEGIN FOUNDATIONS UPDATE 20260929
+\subsection{Upstream Two-Sector Cluster Partition and Multi-Cluster Meta-Audit}
+\label{sec:upstream-two-sector-cluster-partition-20260929}
+
+In the upstream theory hub (\texttt{F25--F49}), the Observer-Canonical Spectral Rescaling Theorem (\texttt{OCSR-H1}) and the action-level no-bypass proof (\texttt{OCSR-NOBYPASS-H1}) fix the unique dimensionless spectral stratification constant and cosmological acceleration scale without free parameters:
+\begin{align*}
+\alpha_{\mathrm{OCSR}} &= \frac{5\sqrt{3}}{24}, \\
+a_0^{\mathrm{OCSR}} &= \frac{\alpha_{\mathrm{OCSR}}}{2}\,cH_0 = \frac{5\sqrt{3}}{48}\,cH_0 = 1.1808\times 10^{-10}\;\mathrm{m/s^2}
+\quad (H_0=67.36\;\mathrm{km\,s^{-1}\,Mpc^{-1}}),
+\end{align*}
+together with the explicit dimensionless scalar response function
+\[
+F_{\mathrm{OD}}(x) = 1 + \alpha_{\mathrm{OCSR}}\ln(1+x),
+\qquad
+x(r) \equiv \frac{a_0^{\mathrm{OCSR}}}{g_N(r)} = \frac{1}{y(r)},
+\qquad
+F_{\mathrm{OD}}(r) \equiv F_{\mathrm{OD}}\!\bigl(x(r)\bigr),
+\]
+while the vector zero-mode closure integral minus the Gate~2.4 scalar--vector mixing subtraction fixes the cosmological dust-like dark-sector-to-baryon ratio (\texttt{F30}):
+\[
+\frac{\Omega_{A,\mathrm{eff}}}{\Omega_b}
+= \frac{2}{\alpha_{\mathrm{OCSR}}} - \frac{1}{4+\sqrt{3}}
+= \frac{213\sqrt{3}-20}{65}
+= 5.368104954.
+\]
+For galaxy clusters where $y(r)=g_N(r)/a_0^{\mathrm{OCSR}}$ crosses unity, the two-sector partition of unity between the local static scalar response $F_{\mathrm{OD}}(r)^2$ and the cluster-scale vector zero-mode background predicts the parameter-free total lensing mass profile (\texttt{F31}):
+\[
+M_{\mathrm{total}}^{\mathrm{OCSR}}(r)
+= M_{\mathrm{bar}}(r)\!\left[
+\frac{y(r)}{1+y(r)}\,F_{\mathrm{OD}}(r)^2
++ \frac{1}{1+y(r)}\!\left(\frac{\Omega_{A,\mathrm{eff}}}{\Omega_b}\right)
+\right],
+\qquad
+\Phi=\Psi\quad(\eta_{\mathrm{slip}}=0).
+\]
+
+\paragraph{Summary of upstream cluster benchmarks (\texttt{F31--F49}).}
+Figure~\ref{fig:paper6-upstream-clusters} summarizes the companion cluster weak-lensing and hydrodynamical audits:
+(1) across 9 weak-lensing radial bins ($100\text{--}3000\;\mathrm{kpc}$) of the Coma Cluster at $k=0$, the partition yields $\chi^2/\mathrm{dof}=0.528$ ($\mathrm{AIC}=4.75$ vs.\ 2-parameter $\Lambda$CDM NFW $\mathrm{AIC}=5.35$ and static MOND $\mathrm{AIC}=40.87$);
+(2) in the Bullet Cluster (\texttt{1E 0657-558}), the collisionless vector condensate places primary and subcluster $\kappa(x,y)$ peaks at $189.0\;\mathrm{kpc}$ ($+0.16\sigma$ vs.\ $185\pm 25\;\mathrm{kpc}$) and $230.0\;\mathrm{kpc}$ ($+0.40\sigma$ vs.\ $220\pm 25\;\mathrm{kpc}$), well separated from the stripped X-ray gas peaks;
+(3) in cluster-level non-pseudoreplicated inference ($N_{\mathrm{indep}}=18$) across all 6 \HFF{} + 12 CLASH clusters, $18/18$ cluster medians exceed $1.10$ (exact two-sided sign-test $p_{2\mathrm{s}}=7.63\times 10^{-6}$, grand median $1.218$, 95\% CI $[1.166,1.353]$, rejecting the unstructured geometry-matched spatial null rather than $\Lambda$CDM); and
+(4) across $165$ unique clusters and groups (\texttt{F33--F49}), replacing naive local shell-by-shell proportionality $M_A(<r)\propto M_{\mathrm{bar}}(<r)$ ($0.592$ at $r_{2500}^{\mathrm{X}}$) with a cored collisionless vector condensate plus spherical shock/AGN ICM hydrodynamics (\texttt{F38--F39}, $k=0$) yields median $M_{\mathrm{pred}}/M_{\mathrm{lens}}=1.012$ on CLASH-20 $r_{2500}^{\mathrm{X}}$ and $1.003$ ($\chi^2/N=1.08$) on untouched LoCuSS-41 $r_{2500}^{\mathrm{X}}$, while explicitly documenting merger-clumping outskirt systematics ($1.198$ at $r_{500}$), non-blind post-freeze cosmic-time AGN duty diagnostics (\texttt{F49}), and low-mass group ($T_X<2.5\;\mathrm{keV}$) gas evacuation. These upstream checks do not alter the observational prefilter definition, row-level spatial-block uncertainties, or frozen \HFF{}/CLASH enrichment tables of this paper.
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=0.98\textwidth]{figures/fig_clusters_coma_bullet_and_holdout.png}
+\caption{Upstream galaxy-cluster and group weak-lensing benchmarks across $165$ unique systems (\texttt{F31--F49}). \textbf{(a)} 9-bin Coma Cluster weak-lensing profile ($\chi^2/\nu=0.528$, $\mathrm{AIC}=4.75$ vs.\ 2-parameter $\Lambda$CDM NFW $5.35$ and MOND $40.87$). \textbf{(b)} Bullet Cluster (\texttt{1E 0657-558}) 2D stripped X-ray gas density vs.\ collisionless Tau \texttt{OCSR-H1} $\kappa(x,y)$ contours ($189.0$ and $230.0\;\mathrm{kpc}$). \textbf{(c)} Mass-ratio progression $M_{\mathrm{pred}}/M_{\mathrm{WL}}$ across $165$ unique systems: local \texttt{F33} deficit ($0.592$), \texttt{F39} CLASH-20 closure ($1.012$), untouched LoCuSS-41 $r_{2500}^{\mathrm{X}}$ ($1.003$), LoCuSS-41 $R_{500}$ (\texttt{F39} $1.198$ vs.\ non-blind \texttt{F49*} $1.067$), matched CCCP-24 untouched \texttt{F39} ($0.944/1.030$), high-$z$ SPT+WtG-19 (\texttt{F39} $1.223$ vs.\ non-blind \texttt{F49*} $1.056$), massive $T_X\ge 3\;\mathrm{keV}$ HSC-XXL clusters ($1.076$), and the $T_X<2.5\;\mathrm{keV}$ low-mass group limit ($0.679$).}
+\label{fig:paper6-upstream-clusters}
+\end{figure}
+% END FOUNDATIONS UPDATE 20260929
+
+\subsection{Canonical Three-Pillar Reduction (2026-11-14)}
+In the consolidated 2026-11-14 Three-Pillar Canonical Reduction of the foundational series (Theorems U1--U4, F1--F4, COV-DIR, and HOMOG-K4), the unique discrete $K_4$/Clifford projector lock fixes $r_{\mathrm{seed}}=1/4$ and $\alpha_{\mathrm{OCSR}}=\frac{5\sqrt{3}}{24}$ with $k=0$ free parameters, leaving only a single ontic realization postulate (\texttt{POST-OCC-NU1} / \texttt{EAS-SNPR-N1}). Within Paper 6, however, the primary empirical result remains strictly the model-sensitive \HFF{}$+$CLASH X-ray/lensing cross-readout enrichment statistic above matched geometry-preserving nulls.
 
 \section{Conclusion}
 
